@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<body ng-app="myApp" ng-controller="imageController">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+Enter the String to search on google
+<input type="text" ng-model = "queryString"></input>
+<br></br>
+<button ng-click="fetchImages(queryString)">Submit</button><br></br>
+<button ng-click="getImages(queryString)">GetImages</button>
+
+<ul class="list-group" >
+  <li  class="list-group-item" ng-repeat="image in images"><img src="{{image.thumb_url}}" class="img-rounded"></li>
+</ul>
+
+<script type='text/javascript' src='/scripts/jquery-3.0.0.min.js'></script>
+<script src="/js/angular.min.js"> </script>
+<script src="/js/app.js"> </script>
+<script src="/js/imageController.js"></script>
+
+</body>
+
+</html>
